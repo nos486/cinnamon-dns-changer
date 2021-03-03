@@ -1,7 +1,7 @@
 Cinnamon DNS Changer applet
 =========================
 
-A simple applet for fast changing dns server in /resolv.conf
+A simple applet for fast-changing DNS server in /resolv.conf
 
 ![screenshot](screenshot.jpg)
 
