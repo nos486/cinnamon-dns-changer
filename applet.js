@@ -2,14 +2,14 @@ const Applet = imports.ui.applet;
 const Lang = imports.lang;
 const PopupMenu = imports.ui.popupMenu;
 const Mainloop = imports.mainloop;
-const Settings = imports.ui.settings;  // Needed for settings API
+const Settings = imports.ui.settings;
 const Gio = imports.gi.Gio;
 const GLib = imports.gi.GLib;
 const Tweener = imports.ui.tweener;
 const Main = imports.ui.main;
 
 
-class CinnamonSettingsExampleApplet extends Applet.TextIconApplet {
+class CinnamonDNSChangerApplet extends Applet.TextIconApplet {
 
 
     constructor(orientation, panel_height, instance_id) {
@@ -49,30 +49,6 @@ class CinnamonSettingsExampleApplet extends Applet.TextIconApplet {
     on_slider_changed(slider, value) {
         this.scale_val = value;
     }
-
-    on_config_button_pressed() {
-        this.set_applet_label(_("YOU PRESSED THE BUTTON!!!"));
-
-        let timeoutId = Mainloop.timeout_add(3000, Lang.bind(this, function () {
-            this.on_settings_changed();
-        }));
-
-        //animate icon
-        Tweener.addTween(this._applet_icon, {
-            margin_left: 10,
-            time: 0.5,
-            transition: this.tween_function,
-            onComplete() {
-                Tweener.addTween(this._applet_icon, {
-                    margin_left: 0,
-                    time: 0.5,
-                    transition: this.tween_function
-                });
-            },
-            onCompleteScope: this
-        });
-    }
-
 
     on_applet_clicked(event) {
         this.server_list_update()
@@ -142,7 +118,7 @@ class CinnamonSettingsExampleApplet extends Applet.TextIconApplet {
 
 }
 
-function main(metadata, orientation, panel_height, instance_id) {  // Make sure you collect and pass on instanceId
-    return new CinnamonSettingsExampleApplet(orientation, panel_height, instance_id);
+function main(metadata, orientation, panel_height, instance_id) {
+    return new CinnamonDNSChangerApplet(orientation, panel_height, instance_id);
 }
 
