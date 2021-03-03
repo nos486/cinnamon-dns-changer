@@ -1,4 +1,4 @@
-DNS Changer (cinnamon-applet)
+Cinnamon DNS Changer applet
 =========================
 
 A simple applet for fast changing dns server in /resolv.conf
@@ -11,13 +11,13 @@ Usage
 
 ```
 cd ~/.local/share/cinnamon/applets
-git clone https://github.com/nos486/dns-changer.git
+git clone https://github.com/nos486/cinnamon-dns-changer.git
 ```
 
 Issues
 ------
 
-Please report issues [here](https://github.com/nos486/dns-changer/issues).
+Please report issues [here](https://github.com/nos486/cinnamon-dns-changer/issues).
 
 License
 -------
