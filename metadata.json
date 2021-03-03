@@ -1,0 +1,7 @@
+{
+    "uuid": "dns-changer@nos486",
+    "name": "DNS Changer",
+    "description": "A sample applet for switch dns server",
+    "icon": "internet-amarok",
+    "max-instances": -1
+   }

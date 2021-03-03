@@ -1,0 +1,36 @@
+{
+    "head_server" : {
+        "type" : "header",
+        "description" : "DNS Servers list"
+     },
+    "server_list" : {
+        "type" : "list",
+        "description" : "DNS Servers list",
+        "columns" : [
+            {"id": "name", "title": "Name", "type": "string"},
+            {"id": "ip1", "title": "Primary Address", "type": "string"},
+            {"id": "ip2", "title": "Secondary Address", "type": "string"},
+            {"id": "is_show", "title": "Show In Menu", "type": "boolean", "default": true}
+        ],
+        "default" : [
+            {"name": "OpenDNS", "ip1": "208.67.222.222" , "ip2":"208.67.220.220", "is_show" :  true},
+            {"name": "Cloudflare", "ip1": "1.1.1.1" , "ip2":"1.0.0.1", "is_show" :  true},
+            {"name": "Google Public DNS", "ip1": "8.8.8.8", "ip2": "8.8.4.4", "is_show" :  true},
+            {"name": "Comodo Secure DNS", "ip1": "8.26.56.26", "ip2": "8.20.247.20", "is_show" :  true},
+            {"name": "Quad9", "ip1": "9.9.9.9", "ip2": "149.112.112.112", "is_show" :  true},
+            {"name": "Verisign DNS", "ip1": "64.6.64.6", "ip2": "64.6.65.6", "is_show" :  true}
+        ]
+    },
+
+    "head_icon" : {
+        "type" : "header",
+        "description" : "Icon"
+    },
+
+    "icon-name": {
+        "type": "iconfilechooser",
+        "default" : "internet-amarok",
+        "description" : "The icon to use in the panel",
+        "tooltip" : "Select an icon file, or you can type an icon name into the entry box"
+    }
+}
